@@ -1,0 +1,61 @@
+.heading-section .subheading {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.2);
+}
+.menu{
+    padding: 100px 0;
+}
+
+ h2 {
+    line-height: 1.5;
+    color: #404044;
+    font-weight: 400;
+}
+
+.dish-menu .nav-pills a {
+
+    float: left;
+    border-radius: 0;
+    margin-bottom: 0;
+    background: white;
+ 
+    box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #a5a5ab;
+    font-weight: 700;
+}
+.dish-menu .menus {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+
+    box-shadow: 0px 1px 18px -12px rgba(0, 0, 0, 0.75);
+
+    transition: all 0.3s ease;
+}
+.dish-menu  .text .one-half h3 {
+    font-size: 18px;
+}
+.dish-menu img {
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    
+    border-radius: 50%;
+}
+.dish-menu .menus .text .one-forth .price {
+    font-size: 30px;
+    color: #404044;
+    line-height: 1.4;
+}
+.dish-menu .menus .text .one-half {
+    width: calc(100% - 80px);
+}
+.nav-pills  a{
+    cursor: pointer;
+}
