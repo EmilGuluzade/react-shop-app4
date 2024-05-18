@@ -41,17 +41,20 @@ console.log(data)
       setBasket([...basket, newItem]);
     } else {
       basketItem.count++;
-      basketItem.totalPrice++;
+      basketItem.totalPrice+=basketItem.price;
       setBasket([...basket]);
     }
   }
   function deleteFromBasket(id) {
-    let target = basket.find((x) => x._id == id);
-    if (target.count > 1) {
-      target.count++, (target.totalPrice = target.price * target.count);
-      setBasket([...basket]);
-    } else {
-      setBasket([...basket.filter((x) => x._id != id)]);
+    const target = basket.find((item) => item._id === id);
+    if (target) {
+      if (target.count > 1) {
+        target.count--;
+        target.totalPrice -= target.price;
+        setBasket([...basket]); 
+      } else {
+        setBasket(basket.filter((item) => item._id !== id)); 
+      }
     }
   }
   const contextData = {
@@ -65,7 +68,10 @@ console.log(data)
   return (
     <>
       <MainContext.Provider value={contextData}>
-        <RouterProvider router={router} />
+<HelmetProvider>
+<RouterProvider router={router} />
+
+</HelmetProvider>
       </MainContext.Provider>
     </>
   );

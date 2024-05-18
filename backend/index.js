@@ -11,13 +11,12 @@ const productSchema=mongoose.Schema({
     "price":Number,
     "description": String,
     "category": String,
-    "image": String,
-    "category": String,
+    "image": String
 })
 
 const Product=mongoose.model("Product",productSchema)
 
-mongoose.connect(process.env.CONNECT_URL).then(res => {
+mongoose.connect(process.env.URL).then(res => {
     console.log("db connected")
 })
 
@@ -56,5 +55,5 @@ app.put("/api/products/:id", async (req, res) => {
 })
 
 app.listen(process.env.PORT, (req, res) => {
-    console.log("api running on 5000")
+    console.log("api running on 8080")
 })
